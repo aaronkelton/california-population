@@ -8,7 +8,7 @@ class CreateProjections < ActiveRecord::Migration[5.1]
       t.text    :race,                   null: false
       t.string  :gender,      limit: 6,  null: false
       t.integer :age,                    null: false
-      t.ingeger :population,             null: false
+      t.integer :population,             null: false
 
       t.timestamps
     end
