@@ -77,8 +77,9 @@ To https://github.com/chemturion/california-population.git
 error: failed to push some refs to 'https://github.com/chemturion/california-population.git'
 ```
 
-I guess I could try doing the seeding, and then delete or add the original CSV file to my .gitignore. Be sure to [view your timestamp history to report on time it takes](https://www.cyberciti.biz/faq/unix-linux-bash-history-display-date-time/).
+I guess I could try doing the seeding, and then delete or add the original CSV file to my .gitignore. And... I stopped that process after 5 hours of processing. Wow.
+
+So let's try the [smarter_csv](https://github.com/tilo/smarter_csv) gem.
 
 ## Alternatives
 - [How to Import Millions Records via ActiveRecord Within Minutes Not Hours](http://ruby-journal.com/how-to-import-millions-records-via-activerecord-within-minutes-not-hours/)
-- [smarter_csv](https://github.com/tilo/smarter_csv)
