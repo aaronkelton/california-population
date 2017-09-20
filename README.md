@@ -59,8 +59,26 @@ git add commit (new schema.rb file)
 
 ## Brain
 
-Deterimine how to import CSV files using Rails
-Initial search showed Ruby's built in CSV module
-Better "Rails-y" option looks like `smarter_csv` option
-Not sure if I should just write a migration that uses the SQL from the tutorial though; drawbacks?
+I tried [How to seed a Rails database with a CSV file](https://gist.github.com/arjunvenkat/1115bc41bf395a162084), but GitHub won't allow a file larger than 100 Mb:
+```bash
+aaron$ git push -u origin master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 17.35 MiB | 8.90 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: f3d404221deb2415e5de676b62eed0f7
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File lib/seeds/CA_DRU_proj_2010-2060.csv is 234.09 MB; this exceeds GitHub's file size limit of 100.00 MB
+To https://github.com/chemturion/california-population.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/chemturion/california-population.git'
+```
 
+I guess I could try doing the seeding, and then delete or add the original CSV file to my .gitignore. Be sure to [view your timestamp history to report on time it takes](https://www.cyberciti.biz/faq/unix-linux-bash-history-display-date-time/).
+
+## Alternatives
+- [How to Import Millions Records via ActiveRecord Within Minutes Not Hours](http://ruby-journal.com/how-to-import-millions-records-via-activerecord-within-minutes-not-hours/)
+- [smarter_csv](https://github.com/tilo/smarter_csv)
